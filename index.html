@@ -55,6 +55,21 @@ h1,h2,h3{text-wrap:balance}
 @media (min-width:1100px){.hero .wrap h1{max-width:calc(100% - 330px)}.hero .wrap p{max-width:min(33em,calc(100% - 330px))}.exp-linha{display:none}}
 @media (max-width:1099px){.marco{display:none}}
 
+
+/* destaque Direito de Família */
+.familia{background:var(--paper);position:relative;border-bottom:1px solid var(--rule)}
+.familia::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--orange)}
+.fam-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:56px;align-items:center}
+.familia .sec-title{margin:12px 0 20px}
+.familia p{margin:0 0 16px;color:#33405A;max-width:34em}
+.fam-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.fam-servicos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.fam-servicos li{background:var(--mist);border-radius:8px;padding:20px 20px 18px;border-left:3px solid var(--orange);display:grid;gap:4px;align-content:start}
+.fam-servicos b{font-family:var(--display);color:var(--navy);font-size:18px;font-weight:600;line-height:1.25}
+.fam-servicos span{font-size:14px;color:var(--muted);line-height:1.5}
+@media (max-width:899px){.fam-grid{grid-template-columns:1fr;gap:34px}}
+@media (max-width:519px){.fam-servicos{grid-template-columns:1fr}}
+
 /* botões */
 .btn{display:inline-flex;align-items:center;gap:10px;font:700 15px var(--body);text-decoration:none;border-radius:4px;padding:14px 24px;border:1.5px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s,transform .2s}
 .btn svg{width:18px;height:18px;flex:none}
@@ -282,6 +297,7 @@ footer.base .legal{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;pad
     <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     <nav class="menu" id="menu" aria-label="Seções">
       <a href="#sobre">Quem sou</a>
+      <a href="#familia">Família</a>
       <a href="#areas">Áreas de atuação</a>
       <a href="#advogado">O advogado</a>
       <a href="#artigos">Artigos</a>
@@ -298,7 +314,7 @@ footer.base .legal{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;pad
       <div class="exp-linha"><b>+ de 9 anos</b> de atuação na advocacia cível</div>
       <div class="eyebrow">Maurício Barreto de Ferreira Bandeira · OAB/PR 88.257</div>
       <h1 id="h-hero">Rigor técnico no processo, <span>atenção pessoal</span> em cada etapa.</h1>
-      <p>Há mais de 9 anos atuando em Direito Imobiliário, Condomínios, Família e Execuções, com experiência em toda a área cível. Atendimento para pessoas, empresas e condomínios, no escritório ou online, em todo o Brasil.</p>
+      <p>Há mais de 9 anos atuando com destaque em Direito de Família, além de Direito Imobiliário, Condomínios, Execuções e toda a área cível. Atendimento para pessoas, empresas e condomínios, no escritório ou online, em todo o Brasil.</p>
       <div class="ctas">
         <a class="btn btn-ghost" href="#areas">Conheça as áreas de atuação</a>
         <a class="btn btn-solid" href="#contato">Agendar consulta</a>
@@ -307,6 +323,30 @@ footer.base .legal{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;pad
     <div class="wrap" style="position:absolute;inset:0;pointer-events:none;padding-block:0" aria-hidden="false"><div class="marco" role="img" aria-label="Mais de 9 anos de atuação"><div><span class="mais">Mais de</span><span class="num">9</span><span class="txt">anos de atuação</span><span class="sub">na advocacia cível</span></div></div></div>
     <a class="scroll-cue" href="#sobre" aria-label="Ir para a próxima seção"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a>
   </section>
+
+  <section class="band familia" id="familia" aria-labelledby="h-fam">
+    <div class="wrap fam-grid">
+      <div>
+        <div class="eyebrow">Atuação em destaque</div>
+        <h2 class="sec-title" id="h-fam">Direito de Família</h2>
+        <p>Divórcio, pensão, guarda e partilha mexem com a rotina de toda a família. Cada caso é conduzido pessoalmente pelo advogado, com discrição, linguagem clara e prioridade para o acordo sempre que ele for possível.</p>
+        <p>Quando o acordo não é viável, a atuação segue no processo judicial, com acompanhamento próximo de cada etapa. Atendimento presencial ou online, em todo o Brasil.</p>
+        <div class="fam-ctas">
+          <a class="btn btn-solid" href="#contato">Fale sobre a sua questão de família</a>
+          <a class="btn btn-outline" href="#artigos">Leia os artigos</a>
+        </div>
+      </div>
+      <ul class="fam-servicos">
+        <li><b>Divórcio</b><span>Consensual em cartório ou judicial, com ou sem filhos menores</span></li>
+        <li><b>Pensão alimentícia</b><span>Fixação, revisão e exoneração de alimentos</span></li>
+        <li><b>Guarda e convivência</b><span>Guarda compartilhada ou unilateral e regime de visitas</span></li>
+        <li><b>União estável</b><span>Reconhecimento, dissolução e definição de direitos</span></li>
+        <li><b>Partilha de bens</b><span>Divisão do patrimônio do casal, inclusive imóveis e empresas</span></li>
+        <li><b>Execução de alimentos</b><span>Cobrança de pensão atrasada pelo rito da prisão ou da penhora</span></li>
+      </ul>
+    </div>
+  </section>
+
 
   <section class="band sobre" id="sobre" aria-labelledby="h-sobre">
     <div class="wrap">
@@ -340,6 +380,14 @@ footer.base .legal{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;pad
     <div class="wrap">
       <div class="areas-grid">
         <article class="area">
+          <svg class="art" viewBox="0 0 300 430" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="g3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#33406E"/><stop offset="1" stop-color="#101C38"/></linearGradient><radialGradient id="r3" cx=".5" cy=".42" r=".5"><stop offset="0" stop-color="#ECA151" stop-opacity=".35"/><stop offset="1" stop-color="#ECA151" stop-opacity="0"/></radialGradient></defs><rect width="300" height="430" fill="url(#g3)"/><circle cx="150" cy="170" r="150" fill="url(#r3)"/><g fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="1.4"><circle cx="118" cy="160" r="58"/><circle cx="182" cy="160" r="58"/></g><circle cx="150" cy="215" r="34" fill="none" stroke="#ECA151" stroke-width="1.8"/></svg>
+          <div class="eyebrow">Relações e patrimônio</div>
+          <h3>Família</h3>
+          <p>Questões delicadas conduzidas com cuidado, priorizando o acordo sempre que possível.</p>
+          <ul class="det"><li>Divórcio judicial e em cartório</li><li>União estável</li><li>Pensão alimentícia e revisão</li><li>Guarda e convivência</li><li>Partilha de bens</li><li>Execução de alimentos</li></ul>
+          <button type="button" aria-expanded="false">Saiba mais</button>
+        </article>
+        <article class="area">
           <svg class="art" viewBox="0 0 300 430" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A4A7C"/><stop offset="1" stop-color="#0E1C38"/></linearGradient></defs><rect width="300" height="430" fill="url(#g1)"/><g fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="1.4"><path d="M60 300V140l90-70 90 70v160"/><path d="M40 156 150 70l110 86"/><rect x="128" y="220" width="44" height="80"/><rect x="80" y="160" width="34" height="34"/><rect x="186" y="160" width="34" height="34"/><path d="M97 160v34M80 177h34M203 160v34M186 177h34"/><path d="M0 300h300"/></g><circle cx="230" cy="70" r="34" fill="#ECA151" fill-opacity=".85"/><circle cx="230" cy="70" r="70" fill="#ECA151" fill-opacity=".12"/></svg>
           <div class="eyebrow">Compra, posse e registro</div>
           <h3>Direito Imobiliário</h3>
@@ -353,14 +401,6 @@ footer.base .legal{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;pad
           <h3>Condomínios</h3>
           <p>Assessoria a condomínios e defesa de condôminos, da cobrança à convivência.</p>
           <ul class="det"><li>Cobrança e execução de cotas</li><li>Convenção e regimento interno</li><li>Assembleias e destituição de síndico</li><li>Infiltrações e danos entre unidades</li><li>Multas e conflitos de vizinhança</li></ul>
-          <button type="button" aria-expanded="false">Saiba mais</button>
-        </article>
-        <article class="area">
-          <svg class="art" viewBox="0 0 300 430" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="g3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#33406E"/><stop offset="1" stop-color="#101C38"/></linearGradient><radialGradient id="r3" cx=".5" cy=".42" r=".5"><stop offset="0" stop-color="#ECA151" stop-opacity=".35"/><stop offset="1" stop-color="#ECA151" stop-opacity="0"/></radialGradient></defs><rect width="300" height="430" fill="url(#g3)"/><circle cx="150" cy="170" r="150" fill="url(#r3)"/><g fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="1.4"><circle cx="118" cy="160" r="58"/><circle cx="182" cy="160" r="58"/></g><circle cx="150" cy="215" r="34" fill="none" stroke="#ECA151" stroke-width="1.8"/></svg>
-          <div class="eyebrow">Relações e patrimônio</div>
-          <h3>Família</h3>
-          <p>Questões delicadas conduzidas com cuidado, priorizando o acordo sempre que possível.</p>
-          <ul class="det"><li>Divórcio judicial e em cartório</li><li>União estável</li><li>Pensão alimentícia e revisão</li><li>Guarda e convivência</li><li>Partilha de bens</li><li>Execução de alimentos</li></ul>
           <button type="button" aria-expanded="false">Saiba mais</button>
         </article>
         <article class="area">
@@ -598,7 +638,7 @@ footer.base .legal{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;pad
         <div class="campo"><label for="f-mail">E-mail</label><input id="f-mail" name="email" type="email" autocomplete="email"></div>
         <div class="campo"><label for="f-cid">Cidade e estado</label><input id="f-cid" name="cidade" placeholder="Ex.: Curitiba/PR"></div>
         <div class="campo"><label for="f-area">Assunto</label>
-          <select id="f-area" name="area"><option>Direito Imobiliário</option><option>Condomínio</option><option>Família</option><option>Execução ou cobrança</option><option>Outro assunto cível</option></select></div>
+          <select id="f-area" name="area"><option>Família</option><option>Direito Imobiliário</option><option>Condomínio</option><option>Execução ou cobrança</option><option>Outro assunto cível</option></select></div>
         <div class="campo"><label for="f-pref">Prefiro atendimento</label>
           <select id="f-pref" name="pref"><option>Online, por videochamada</option><option>Presencial, no escritório</option><option>Indiferente</option></select></div>
         <div class="campo full"><label for="f-msg">Conte brevemente o seu caso</label><textarea id="f-msg" name="msg" required></textarea></div>
