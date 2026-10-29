@@ -33,11 +33,11 @@ try{
   const largura=box.max.x-box.min.x;
   const cv=renderer.domElement; cv.setAttribute('aria-hidden','true'); alvo.appendChild(cv); alvo.classList.add('ativo');
   function ajusta(){const w=alvo.clientWidth,h=alvo.clientHeight; if(!w||!h)return; renderer.setSize(w,h,false); cam.aspect=w/h; cam.updateProjectionMatrix();
-    const vis=2*Math.tan(THREE.MathUtils.degToRad(cam.fov/2))*cam.position.z*cam.aspect; grupo.scale.setScalar(vis*0.9/largura);}
+    const vis=2*Math.tan(THREE.MathUtils.degToRad(cam.fov/2))*cam.position.z*cam.aspect; grupo.scale.setScalar(vis*0.8/largura);}
   new ResizeObserver(ajusta).observe(alvo); ajusta();
   function quadro(now){
     const t=now/1000;
-    if(!reduz){grupo.rotation.set(Math.sin(t*.45)*.04,Math.sin(t*.6)*.24,0);}
+    if(!reduz){grupo.rotation.set(Math.sin(t*.45)*.03,Math.sin(t*.6)*.17,0);}
     const ciclo=6,f=(t%ciclo)/ciclo; sweep.intensity=f<.45?Math.sin(f/.45*Math.PI)*2.4:0; sweep.position.x=-900+f/.45*1800;
     renderer.render(scene,cam); requestAnimationFrame(quadro);
   }
