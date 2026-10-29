@@ -12,7 +12,7 @@ try{
   renderer.outputColorSpace=THREE.SRGBColorSpace; renderer.toneMapping=THREE.ACESFilmicToneMapping; renderer.toneMappingExposure=1.08;
   const scene=new THREE.Scene();
   const pmrem=new THREE.PMREMGenerator(renderer); scene.environment=pmrem.fromScene(new RoomEnvironment(),0.04).texture;
-  const cam=new THREE.PerspectiveCamera(26,4,1,5000); cam.position.set(0,0,1200);
+  const cam=new THREE.PerspectiveCamera(9,4,10,20000); cam.position.set(0,0,4200);
   const key=new THREE.DirectionalLight(0xffffff,1.6); key.position.set(-300,400,800); scene.add(key);
   const rim=new THREE.DirectionalLight(0xECA151,1.2); rim.position.set(500,-200,-400); scene.add(rim);
   const sweep=new THREE.PointLight(0xFFD9A8,0,900,1.4); sweep.position.set(-400,40,160); scene.add(sweep);
@@ -33,7 +33,7 @@ try{
   const largura=box.max.x-box.min.x;
   const cv=renderer.domElement; cv.setAttribute('aria-hidden','true'); alvo.appendChild(cv); alvo.classList.add('ativo');
   function ajusta(){const w=alvo.clientWidth,h=alvo.clientHeight; if(!w||!h)return; renderer.setSize(w,h,false); cam.aspect=w/h; cam.updateProjectionMatrix();
-    const vis=2*Math.tan(THREE.MathUtils.degToRad(cam.fov/2))*cam.position.z*cam.aspect; grupo.scale.setScalar(vis*0.8/largura);}
+    const vis=2*Math.tan(THREE.MathUtils.degToRad(cam.fov/2))*cam.position.z*cam.aspect; grupo.scale.setScalar(vis*0.86/largura);}
   new ResizeObserver(ajusta).observe(alvo); ajusta();
   function quadro(now){
     const t=now/1000;
