@@ -376,3 +376,10 @@ a.selo-m:hover{transform:translateY(-3px)}
 .selos-nota{font-size:11.5px;color:var(--muted);text-align:center;margin:0 auto;padding-bottom:20px}
 @media (max-width:1099px){.selos-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:599px){.selos-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.selo-m .medalha{width:88px;height:88px}}
+
+/* fotos de fundo por área */
+.area img.art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .6s ease}
+.area:hover img.art{transform:scale(1.05)}
+.area::after{background:linear-gradient(180deg,rgba(11,23,48,.15) 0%,rgba(11,23,48,.55) 45%,rgba(11,23,48,.96) 100%)}
+.pg-hero.com-foto{background:linear-gradient(100deg,rgba(11,23,48,.96) 0%,rgba(11,23,48,.86) 45%,rgba(20,40,75,.55) 100%),var(--foto) center/cover no-repeat,var(--navy-deep)}
+@media (max-width:640px){.pg-hero.com-foto{background:linear-gradient(180deg,rgba(11,23,48,.88),rgba(11,23,48,.96)),var(--foto) center/cover no-repeat,var(--navy-deep)}}

@@ -122,6 +122,25 @@ def rodape():
     return SELOS + '\n' + FOOTER + '\n' + WAFLOAT + f'\n<script src="/assets/site.js?v={V}" defer></script>\n</body>\n</html>\n'
 
 
+FOTO_BASE = 'https://images.unsplash.com/'
+FOTOS = {  # fotos de licença livre (Unsplash License)
+    'Família': 'photo-1542037104857-ffbb0b9155fb',
+    'Imobiliário': 'photo-1560518883-ce09059eeffa',
+    'Direito Imobiliário': 'photo-1560518883-ce09059eeffa',
+    'Condomínios': 'photo-1545324418-cc1a3fa10c00',
+    'Execuções': 'photo-1450101499163-c8848c66ca85',
+    'Direito Civil': 'photo-1589391886645-d51941baf7fb',
+}
+
+
+def foto(chave, w=1600, h=700):
+    return f"{FOTO_BASE}{FOTOS.get(chave, FOTOS['Direito Civil'])}?auto=format&fit=crop&w={w}&h={h}&q=60"
+
+
+def hero_foto(chave):
+    return f' style="--foto:url(\'{foto(chave)}\')"'
+
+
 def crumbs(itens):
     parts = []
     for nome, url in itens:
@@ -169,7 +188,7 @@ def pagina_servico(s, todos):
                bc_schema([(n, u if u else f'/{s["slug"]}/') for n, u in itens])]
     corpo = f'''{header_interno()}
 <main id="inicio">
-  <section class="pg-hero">
+  <section class="pg-hero com-foto"{hero_foto(s['grupo'])}>
     <div class="wrap">
       {crumbs(itens)}
       <div class="eyebrow">{esc(s['grupo'] if s['grupo'] != 'Família' else 'Direito de Família')}</div>
@@ -228,7 +247,7 @@ def pagina_artigo(a, outros):
     mais = ''.join(card_artigo(o) for o in outros[:3])
     corpo = f'''{header_interno()}
 <main id="inicio">
-  <section class="pg-hero pg-hero-art">
+  <section class="pg-hero pg-hero-art com-foto"{hero_foto(a['area'])}>
     <div class="wrap">
       {crumbs(itens)}
       <div class="eyebrow">{esc(a['area'])} · <time datetime="{a['data']}">{data_br(a['data'])}</time></div>
@@ -265,7 +284,7 @@ def pagina_indice(arts):
     cards = '\n'.join(card_artigo(a) for a in arts)
     corpo = f'''{header_interno()}
 <main id="inicio">
-  <section class="pg-hero">
+  <section class="pg-hero com-foto"{hero_foto('Direito Civil')}>
     <div class="wrap">
       {crumbs(itens)}
       <div class="eyebrow">Conteúdo informativo</div>
@@ -307,7 +326,7 @@ def pagina_privacidade():
     itens = [('Início', '/'), ('Política de privacidade', None)]
     corpo = f'''{header_interno()}
 <main id="inicio">
-  <section class="pg-hero">
+  <section class="pg-hero com-foto"{hero_foto('Direito Civil')}>
     <div class="wrap">
       {crumbs(itens)}
       <div class="eyebrow">LGPD</div>
