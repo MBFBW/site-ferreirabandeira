@@ -49,7 +49,7 @@ FOOTER = '''<footer class="base">
       </div>
       <div>
         <h4>Outras áreas</h4>
-        <ul><li><a href="/direito-imobiliario/">Direito Imobiliário</a></li><li><a href="/usucapiao/">Usucapião</a></li><li><a href="/condominios/">Condomínios</a></li><li><a href="/execucoes/">Execuções</a></li><li><a href="/artigos/">Artigos</a></li></ul>
+        <ul><li><a href="/direito-imobiliario/">Direito Imobiliário</a></li><li><a href="/usucapiao/">Usucapião</a></li><li><a href="/condominios/">Condomínios</a></li><li><a href="/execucoes/">Execuções</a></li><li><a href="/artigos/">Artigos</a></li><li><a href="/advogado-de-familia-curitiba/">Advogado de Família em Curitiba</a></li><li><a href="/advogado-sao-jose-dos-pinhais/">Advogado em São José dos Pinhais</a></li></ul>
       </div>
       <div>
         <h4>Contato</h4>
@@ -180,7 +180,10 @@ def pagina_servico(s, todos):
         p = next(x for x in todos if x['slug'] == s['pai'])
         itens.append((p.get('curto', p['titulo']), f'/{p["slug"]}/'))
     itens.append((s['titulo'], None))
-    rel = [x for x in todos if x['slug'] != s['slug'] and (x['grupo'] == s['grupo'] or x['slug'] in ('direito-de-familia',))][:6]
+    if s['grupo'] == 'Atendimento':
+        rel = [x for x in todos if x['slug'] in ('direito-de-familia', 'divorcio', 'pensao-alimenticia', 'usucapiao', 'condominios', 'execucoes')]
+    else:
+        rel = [x for x in todos if x['slug'] != s['slug'] and x['grupo'] == s['grupo'] and x['grupo'] != 'Atendimento' or (x['slug'] == 'direito-de-familia' and s['slug'] != 'direito-de-familia')][:6]
     rel_html = ''.join(f'<a href="/{x["slug"]}/"><b>{esc(x["titulo"])}</b><span>{esc(x["descricao"][:90].rsplit(" ", 1)[0])}…</span></a>' for x in rel)
     schemas = [ORG,
                {"@type": "Service", "name": s['titulo'], "serviceType": s['titulo'], "provider": {"@id": SITE + "/#escritorio"}, "areaServed": "BR", "url": url, "description": s['descricao']},

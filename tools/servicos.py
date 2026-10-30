@@ -346,4 +346,75 @@ SERVICOS = [
   ('A dívida prescreve?', 'Sim. O prazo depende do tipo de dívida e do título. A análise do caso indica se a cobrança ainda é possível.'),
  ],
 },
+# ---------------------------------------------------------------- PÁGINAS LOCAIS
+{
+ 'slug': 'advogado-de-familia-curitiba',
+ 'grupo': 'Família',
+ 'pai': 'direito-de-familia',
+ 'titulo': 'Advogado de Família em Curitiba',
+ 'seo_titulo': 'Advogado de Família em Curitiba: divórcio, pensão e guarda',
+ 'descricao': 'Advogado de Direito de Família em Curitiba para divórcio, pensão alimentícia, guarda, união estável e partilha. Atendimento pessoal com Maurício Bandeira, OAB/PR 88.257.',
+ 'lead': 'Divórcio, pensão, guarda e partilha em Curitiba, com atendimento pessoal pelo advogado, do primeiro contato à última decisão. Presencial com hora marcada ou por videochamada.',
+ 'corpo': '''
+<h2>Atendimento em Direito de Família em Curitiba</h2>
+<p>Quem procura um advogado de família em Curitiba geralmente está passando por um momento difícil: uma separação, uma discussão sobre a guarda dos filhos, uma pensão que deixou de ser paga. Nessas horas, faz diferença saber quem está cuidando do caso e conseguir falar com essa pessoa.</p>
+<p>No escritório, cada caso é conduzido pessoalmente pelo advogado Maurício Bandeira, com mais de 10 anos de experiência na advocacia. O atendimento em Curitiba é feito com hora marcada, presencialmente ou por videochamada, e o cliente recebe retorno a cada etapa.</p>
+<h2>Casos atendidos</h2>
+<div class="cards-servico">
+ <a href="/divorcio/"><b>Divórcio</b><span>Em cartório ou na Justiça, com ou sem filhos menores</span></a>
+ <a href="/pensao-alimenticia/"><b>Pensão alimentícia</b><span>Fixação, revisão e exoneração</span></a>
+ <a href="/guarda-de-filhos/"><b>Guarda e convivência</b><span>Guarda compartilhada, unilateral e visitas</span></a>
+ <a href="/uniao-estavel/"><b>União estável</b><span>Reconhecimento e dissolução</span></a>
+ <a href="/partilha-de-bens/"><b>Partilha de bens</b><span>Divisão do patrimônio do casal</span></a>
+ <a href="/execucao-de-alimentos/"><b>Execução de alimentos</b><span>Cobrança de pensão atrasada</span></a>
+</div>
+<h2>Como funciona o processo em Curitiba</h2>
+<p>As ações de família de quem mora em Curitiba tramitam nas Varas de Família do Foro Central, em processo eletrônico. Isso permite acompanhar o andamento a distância e, em muitos casos, participar de audiências por videoconferência.</p>
+<p>Antes de qualquer processo, é avaliada a possibilidade de acordo. Um divórcio consensual sem filhos menores ou incapazes pode ser feito diretamente em cartório. Com filhos menores, também é possível fazê-lo em cartório desde que as questões dos filhos já estejam resolvidas na Justiça, conforme a regra do CNJ. Quando o acordo não é possível, a ação é proposta e acompanhada de perto até a decisão final.</p>
+<h2>O que levar ao primeiro atendimento</h2>
+<ul>
+<li>Documento de identidade, CPF e comprovante de residência.</li>
+<li>Certidão de casamento ou provas da união estável, e certidão de nascimento dos filhos.</li>
+<li>Documentos dos bens e comprovantes de renda e de despesas.</li>
+<li>Se já houver processo, o número dele.</li>
+</ul>
+<p class="base-legal">Base legal: Código Civil, arts. 1.571 a 1.590 e 1.694 a 1.727; Código de Processo Civil, arts. 693 a 699 e 731 a 733; Resolução CNJ 35/2007, com a redação da Resolução CNJ 571/2024.</p>
+''',
+ 'faq': [
+  ('O atendimento em Curitiba é presencial?', 'Sim, com hora marcada. Também é possível ser atendido por videochamada, com o mesmo acompanhamento, o que costuma ser mais prático para quem tem a rotina corrida.'),
+  ('Onde corre o processo de família de quem mora em Curitiba?', 'Em regra, nas Varas de Família do Foro Central de Curitiba. Em ações de alimentos e de guarda, a lei costuma dar preferência ao domicílio de quem pede alimentos ou de quem tem a guarda da criança.'),
+  ('Dá para fazer o divórcio sem ir ao fórum?', 'Quando há acordo, o divórcio pode ser feito em cartório, inclusive de forma eletrônica, sempre com a assistência de advogado. Quando há filhos menores, as questões deles precisam estar previamente resolvidas na Justiça.'),
+ ],
+},
+{
+ 'slug': 'advogado-sao-jose-dos-pinhais',
+ 'grupo': 'Atendimento',
+ 'titulo': 'Advogado em São José dos Pinhais',
+ 'seo_titulo': 'Advogado em São José dos Pinhais: família, imóveis e condomínios',
+ 'descricao': 'Escritório de advocacia em São José dos Pinhais com atuação em Direito de Família, Direito Imobiliário, Condomínios e Execuções. Atendimento pessoal com Maurício Bandeira, OAB/PR 88.257.',
+ 'lead': 'O escritório fica em São José dos Pinhais e atende com hora marcada, presencialmente ou por videochamada. Cada caso é conduzido pessoalmente pelo advogado, do primeiro contato à última decisão.',
+ 'corpo': '''
+<h2>Advocacia em São José dos Pinhais</h2>
+<p>O escritório Ferreira Bandeira Advocacia está sediado em São José dos Pinhais. Isso significa proximidade real com quem mora e trabalha na cidade: atendimento com hora marcada, retorno a cada etapa e acompanhamento dos processos no fórum da cidade.</p>
+<p>O advogado Maurício Bandeira, com mais de 10 anos de experiência, cuida pessoalmente de cada caso, sem repasse a terceiros.</p>
+<h2>Áreas de atuação</h2>
+<div class="cards-servico">
+ <a href="/direito-de-familia/"><b>Direito de Família</b><span>Divórcio, pensão, guarda, união estável e partilha</span></a>
+ <a href="/direito-imobiliario/"><b>Direito Imobiliário</b><span>Compra e venda, contratos, posse e registro</span></a>
+ <a href="/usucapiao/"><b>Usucapião</b><span>Regularização de imóveis em cartório ou na Justiça</span></a>
+ <a href="/condominios/"><b>Condomínios</b><span>Cobrança, assembleias e conflitos entre condôminos</span></a>
+ <a href="/execucoes/"><b>Execuções</b><span>Cobrança de dívidas e defesa de quem é cobrado</span></a>
+</div>
+<h2>Processos no fórum de São José dos Pinhais</h2>
+<p>As ações de quem mora em São José dos Pinhais tramitam, em regra, no Foro Regional de São José dos Pinhais, que integra a Comarca da Região Metropolitana de Curitiba. Os processos são eletrônicos, o que permite acompanhar o andamento a distância e informar o cliente sobre cada movimentação relevante.</p>
+<p>O escritório também atende clientes de Curitiba e das demais cidades da região metropolitana e, por videochamada, de qualquer cidade do Brasil.</p>
+<h2>Como agendar</h2>
+<p>O contato pode ser feito pelo formulário desta página ou pelo WhatsApp (41) 98810-7330, de segunda a sexta, das 9h às 18h. O primeiro passo é uma conversa para entender a situação e indicar os caminhos possíveis.</p>
+''',
+ 'faq': [
+  ('O escritório atende presencialmente em São José dos Pinhais?', 'Sim, com hora marcada. Quem preferir pode ser atendido por videochamada, com o mesmo acompanhamento.'),
+  ('Quais casos o escritório atende?', 'Direito de Família, Direito Imobiliário (inclusive usucapião), Condomínios, Execuções e demais questões cíveis, para pessoas, empresas e condomínios.'),
+  ('Atende moradores de outras cidades?', 'Sim. Além de São José dos Pinhais e Curitiba, o escritório atende toda a região metropolitana e, por videochamada, clientes de todo o Brasil.'),
+ ],
+},
 ]
