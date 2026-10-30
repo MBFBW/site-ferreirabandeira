@@ -817,11 +817,9 @@ footer.base .legal{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;pad
     if(via==='mail'){
       var bt=document.getElementById('btn-mail'), rot=bt.textContent;
       bt.disabled=true; bt.textContent='Enviando...';
-      var dados={'Nome':g('f-nome'),'WhatsApp':g('f-tel'),'E-mail':g('f-mail')||'(não informado)','Cidade':g('f-cid')||'(não informada)','Assunto':g('f-area'),'Preferência':g('f-pref'),'Relato':g('f-msg'),
-        _subject:'Novo contato pelo site – '+g('f-area')+' – '+g('f-nome'),_template:'table',_captcha:'false',_honey:document.getElementById('f-honey').value};
-      if(g('f-mail'))dados._replyto=g('f-mail');
-      fetch('https://formsubmit.co/ajax/'+MAIL,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(dados)})
-        .then(function(r){return r.json().then(function(j){if(!r.ok||String(j.success)!=='true')throw new Error(j.message||'falha');})})
+      var dados={'Nome':g('f-nome'),'WhatsApp':g('f-tel'),'E-mail':g('f-mail')||'(não informado)','Cidade':g('f-cid')||'(não informada)','Assunto':g('f-area'),'Preferência':g('f-pref'),'Relato':g('f-msg'),_honey:document.getElementById('f-honey').value};
+      fetch('https://script.google.com/macros/s/AKfycbwqJKdfWnX9znlkZDObRgVfbw16tc-SF4BXs5APsai1uEOl_itbXqOeqYHVo4OhxunAWg/exec',{method:'POST',body:JSON.stringify(dados)})
+        .then(function(r){return r.json().then(function(j){if(!j||j.ok!==true)throw new Error((j&&j.erro)||'falha');})})
         .then(function(){f.reset();document.getElementById('saida').hidden=true;document.getElementById('ok-mail').hidden=false;document.getElementById('ok-mail').scrollIntoView({block:'nearest'})})
         .catch(function(){err.textContent='Não foi possível enviar agora. Tente novamente em instantes ou fale pelo WhatsApp (41) 98810-7330.';err.hidden=false})
         .then(function(){bt.disabled=false;bt.textContent=rot});
