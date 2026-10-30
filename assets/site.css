@@ -383,3 +383,8 @@ a.selo-m:hover{transform:translateY(-3px)}
 .area::after{background:linear-gradient(180deg,rgba(11,23,48,.15) 0%,rgba(11,23,48,.55) 45%,rgba(11,23,48,.96) 100%)}
 .pg-hero.com-foto{background:linear-gradient(100deg,rgba(11,23,48,.94) 0%,rgba(11,23,48,.78) 45%,rgba(20,40,75,.35) 100%),var(--foto) center/cover no-repeat,var(--navy-deep)}
 @media (max-width:640px){.pg-hero.com-foto{background:linear-gradient(180deg,rgba(11,23,48,.62) 0%,rgba(11,23,48,.82) 55%,rgba(11,23,48,.95) 100%),var(--foto) center/cover no-repeat,var(--navy-deep)}}
+
+/* foto do topo da página inicial */
+.hero .hero-foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 40%;z-index:-2;display:block}
+.hero::after{background:linear-gradient(90deg,rgba(8,16,34,.94) 0%,rgba(8,16,34,.80) 40%,rgba(8,16,34,.45) 75%,rgba(8,16,34,.30) 100%),linear-gradient(0deg,rgba(8,16,34,.6),rgba(8,16,34,0) 40%)}
+@media (max-width:899px){.hero::after{background:linear-gradient(180deg,rgba(8,16,34,.70),rgba(8,16,34,.88) 60%,rgba(8,16,34,.95))}}
