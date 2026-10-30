@@ -381,5 +381,5 @@ a.selo-m:hover{transform:translateY(-3px)}
 .area img.art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .6s ease}
 .area:hover img.art{transform:scale(1.05)}
 .area::after{background:linear-gradient(180deg,rgba(11,23,48,.15) 0%,rgba(11,23,48,.55) 45%,rgba(11,23,48,.96) 100%)}
-.pg-hero.com-foto{background:linear-gradient(100deg,rgba(11,23,48,.96) 0%,rgba(11,23,48,.86) 45%,rgba(20,40,75,.55) 100%),var(--foto) center/cover no-repeat,var(--navy-deep)}
-@media (max-width:640px){.pg-hero.com-foto{background:linear-gradient(180deg,rgba(11,23,48,.88),rgba(11,23,48,.96)),var(--foto) center/cover no-repeat,var(--navy-deep)}}
+.pg-hero.com-foto{background:linear-gradient(100deg,rgba(11,23,48,.94) 0%,rgba(11,23,48,.78) 45%,rgba(20,40,75,.35) 100%),var(--foto) center/cover no-repeat,var(--navy-deep)}
+@media (max-width:640px){.pg-hero.com-foto{background:linear-gradient(180deg,rgba(11,23,48,.62) 0%,rgba(11,23,48,.82) 55%,rgba(11,23,48,.95) 100%),var(--foto) center/cover no-repeat,var(--navy-deep)}}

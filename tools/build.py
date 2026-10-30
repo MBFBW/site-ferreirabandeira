@@ -16,7 +16,7 @@ sys.path.insert(0, os.path.join(RAIZ, 'tools'))
 from servicos import SERVICOS
 
 SITE = 'https://ferreirabandeira.adv.br'
-V = datetime.date.today().strftime('%Y%m%d')
+V = __import__('hashlib').md5(b''.join(open(os.path.join(RAIZ, 'assets', n), 'rb').read() for n in ('site.css', 'site.js', 'logo3d.js'))).hexdigest()[:8]  # muda sempre que estilo ou script mudam
 MESES = ['jan.', 'fev.', 'mar.', 'abr.', 'maio', 'jun.', 'jul.', 'ago.', 'set.', 'out.', 'nov.', 'dez.']
 AREA_LINK = {'Família': '/direito-de-familia/', 'Direito Imobiliário': '/direito-imobiliario/',
              'Condomínios': '/condominios/', 'Execuções': '/execucoes/', 'Direito Civil': '/#areas'}
