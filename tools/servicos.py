@@ -9,7 +9,7 @@ SERVICOS = [
  'titulo': 'Advogado de Direito de Família',
  'curto': 'Direito de Família',
  'seo_titulo': 'Advogado de Direito de Família em Curitiba e São José dos Pinhais',
- 'descricao': 'Divórcio, pensão alimentícia, guarda, união estável e partilha de bens. Atendimento pessoal pelo advogado Maurício Bandeira, OAB/PR 88.257, presencial ou online.',
+ 'descricao': 'Divórcio, pensão alimentícia, guarda, união estável e partilha de bens. Atendimento pessoal pelo advogado Maurício Bandeira, OAB/PR 88.257, presencial ou online. Atendimento em Curitiba, São José dos Pinhais e online.',
  'lead': 'Divórcio, pensão, guarda e partilha mexem com a rotina de toda a família. Cada caso é conduzido pessoalmente, com discrição, linguagem clara e prioridade para o acordo sempre que ele for possível.',
  'corpo': '''
 <h2>Como o escritório atua em Direito de Família</h2>
@@ -45,8 +45,8 @@ SERVICOS = [
  'grupo': 'Família',
  'pai': 'direito-de-familia',
  'titulo': 'Divórcio',
- 'seo_titulo': 'Advogado para Divórcio em São José dos Pinhais e Curitiba',
- 'descricao': 'Divórcio consensual em cartório ou judicial, com ou sem filhos. Entenda os caminhos e os documentos necessários. Atendimento presencial ou online.',
+ 'seo_titulo': 'Advogado de Divórcio em Curitiba e São José dos Pinhais',
+ 'descricao': 'Divórcio consensual em cartório ou judicial, com ou sem filhos. Entenda os caminhos e os documentos necessários. Atendimento em Curitiba, São José dos Pinhais e online.',
  'lead': 'O divórcio pode ser feito em cartório, quando há acordo, ou na Justiça, quando é preciso decidir sobre filhos, bens ou pensão. O caminho certo depende da situação de cada família.',
  'corpo': '''
 <h2>Divórcio em cartório</h2>
@@ -83,8 +83,8 @@ SERVICOS = [
  'grupo': 'Família',
  'pai': 'direito-de-familia',
  'titulo': 'Pensão alimentícia',
- 'seo_titulo': 'Advogado de Pensão Alimentícia: fixação, revisão e exoneração',
- 'descricao': 'Como funciona a pensão alimentícia, quando pedir revisão ou exoneração e como cobrar atrasos. Atendimento pelo advogado Maurício Bandeira, OAB/PR 88.257.',
+ 'seo_titulo': 'Advogado de Pensão Alimentícia em Curitiba e São José dos Pinhais',
+ 'descricao': 'Como funciona a pensão alimentícia, quando pedir revisão ou exoneração e como cobrar atrasos. Atendimento em Curitiba e São José dos Pinhais com o advogado Maurício Bandeira, OAB/PR 88.257.',
  'lead': 'A pensão alimentícia garante o sustento de quem não consegue se manter sozinho, como filhos menores. O valor pode ser fixado por acordo ou pelo juiz e pode mudar quando a situação das partes muda.',
  'corpo': '''
 <h2>Como o valor é definido</h2>
@@ -113,8 +113,8 @@ SERVICOS = [
  'grupo': 'Família',
  'pai': 'direito-de-familia',
  'titulo': 'Guarda e convivência dos filhos',
- 'seo_titulo': 'Advogado de Guarda de Filhos: guarda compartilhada e visitas',
- 'descricao': 'Guarda compartilhada, guarda unilateral, regime de convivência e mudança de cidade. Entenda os direitos dos pais e dos filhos.',
+ 'seo_titulo': 'Advogado de Guarda de Filhos em Curitiba e São José dos Pinhais',
+ 'descricao': 'Guarda compartilhada, guarda unilateral, regime de convivência e mudança de cidade. Entenda os direitos dos pais e dos filhos. Atendimento em Curitiba, São José dos Pinhais e online.',
  'lead': 'Depois da separação, a guarda define como pai e mãe participam das decisões sobre a vida dos filhos. O foco da lei e dos juízes é sempre o interesse da criança.',
  'corpo': '''
 <h2>Guarda compartilhada é a regra</h2>
@@ -138,8 +138,8 @@ SERVICOS = [
  'grupo': 'Família',
  'pai': 'direito-de-familia',
  'titulo': 'União estável',
- 'seo_titulo': 'Advogado de União Estável: reconhecimento e dissolução',
- 'descricao': 'Reconhecimento e dissolução de união estável, regime de bens, contrato de convivência e direitos do casal. Atendimento presencial ou online.',
+ 'seo_titulo': 'Advogado de União Estável em Curitiba e São José dos Pinhais',
+ 'descricao': 'Reconhecimento e dissolução de união estável, regime de bens, contrato de convivência e direitos do casal. Atendimento em Curitiba, São José dos Pinhais e online.',
  'lead': 'A união estável é a convivência pública, contínua e duradoura com objetivo de constituir família. Ela gera direitos parecidos com os do casamento, inclusive sobre os bens.',
  'corpo': '''
 <h2>Reconhecimento da união estável</h2>
@@ -163,8 +163,8 @@ SERVICOS = [
  'grupo': 'Família',
  'pai': 'direito-de-familia',
  'titulo': 'Partilha de bens',
- 'seo_titulo': 'Partilha de Bens no Divórcio e na União Estável',
- 'descricao': 'Como funciona a divisão de bens na separação, regimes de casamento, imóveis financiados e empresas. Atendimento pelo advogado Maurício Bandeira.',
+ 'seo_titulo': 'Partilha de Bens: advogado em Curitiba e São José dos Pinhais',
+ 'descricao': 'Como funciona a divisão de bens na separação, regimes de casamento, imóveis financiados e empresas. Atendimento em Curitiba e São José dos Pinhais com o advogado Maurício Bandeira.',
  'lead': 'Na separação, a divisão do patrimônio segue o regime de bens do casamento ou da união estável. Identificar o que entra na partilha é o primeiro passo para um acordo justo.',
  'corpo': '''
 <h2>O regime de bens define a divisão</h2>
@@ -197,8 +197,8 @@ SERVICOS = [
  'grupo': 'Família',
  'pai': 'direito-de-familia',
  'titulo': 'Execução de alimentos',
- 'seo_titulo': 'Pensão Atrasada: como cobrar (execução de alimentos)',
- 'descricao': 'Como cobrar pensão alimentícia em atraso pelo rito da prisão ou da penhora, desconto em folha e protesto. Atendimento presencial ou online.',
+ 'seo_titulo': 'Cobrar Pensão Atrasada: advogado em Curitiba e São José dos Pinhais',
+ 'descricao': 'Como cobrar pensão alimentícia em atraso pelo rito da prisão ou da penhora, desconto em folha e protesto. Atendimento em Curitiba, São José dos Pinhais e online.',
  'lead': 'Quando a pensão não é paga, a lei oferece meios rápidos de cobrança, que vão do desconto em folha até a prisão civil do devedor.',
  'corpo': '''
 <h2>Os dois caminhos de cobrança</h2>
@@ -229,8 +229,8 @@ SERVICOS = [
  'grupo': 'Imobiliário',
  'pai': 'direito-imobiliario',
  'titulo': 'Usucapião',
- 'seo_titulo': 'Advogado de Usucapião: judicial e em cartório',
- 'descricao': 'Regularize o imóvel sem escritura por usucapião. Prazos, tipos, documentos e usucapião em cartório. Atendimento pelo advogado Maurício Bandeira, OAB/PR 88.257.',
+ 'seo_titulo': 'Advogado de Usucapião em Curitiba e São José dos Pinhais',
+ 'descricao': 'Regularize o imóvel sem escritura por usucapião. Prazos, tipos, documentos e usucapião em cartório. Atendimento em Curitiba e São José dos Pinhais com o advogado Maurício Bandeira, OAB/PR 88.257.',
  'lead': 'A usucapião permite obter a propriedade de um imóvel pela posse prolongada e sem oposição. É o caminho comum para regularizar o imóvel comprado por contrato de gaveta.',
  'corpo': '''
 <h2>Prazos de cada tipo de usucapião</h2>
@@ -262,8 +262,8 @@ SERVICOS = [
  'slug': 'direito-imobiliario',
  'grupo': 'Imobiliário',
  'titulo': 'Direito Imobiliário',
- 'seo_titulo': 'Advogado de Direito Imobiliário em São José dos Pinhais e Curitiba',
- 'descricao': 'Compra e venda de imóveis, distrato, locação, despejo, usucapião e regularização. Atendimento pelo advogado Maurício Bandeira, OAB/PR 88.257.',
+ 'seo_titulo': 'Advogado de Direito Imobiliário em Curitiba e São José dos Pinhais',
+ 'descricao': 'Compra e venda de imóveis, distrato, locação, despejo, usucapião e regularização. Atendimento em Curitiba e São José dos Pinhais com o advogado Maurício Bandeira, OAB/PR 88.257.',
  'lead': 'Segurança em negócios com imóveis e solução de conflitos sobre posse e propriedade, da análise do contrato à regularização no cartório.',
  'corpo': '''
 <h2>Compra e venda de imóveis</h2>
@@ -291,8 +291,8 @@ SERVICOS = [
  'slug': 'condominios',
  'grupo': 'Condomínios',
  'titulo': 'Direito Condominial',
- 'seo_titulo': 'Advogado para Condomínios: cobrança, assembleias e conflitos',
- 'descricao': 'Assessoria a condomínios e condôminos: cobrança de cotas, convenção, assembleias, destituição de síndico, infiltrações e multas.',
+ 'seo_titulo': 'Advogado Condominial em Curitiba e São José dos Pinhais',
+ 'descricao': 'Assessoria a condomínios e condôminos: cobrança de cotas, convenção, assembleias, destituição de síndico, infiltrações e multas. Atendimento em Curitiba, São José dos Pinhais e online.',
  'lead': 'Assessoria a condomínios e defesa de condôminos, da cobrança das cotas às regras de convivência.',
  'corpo': '''
 <h2>Para condomínios e síndicos</h2>
@@ -324,8 +324,8 @@ SERVICOS = [
  'slug': 'execucoes',
  'grupo': 'Execuções',
  'titulo': 'Execuções e cobranças',
- 'seo_titulo': 'Advogado de Execução: cobrança de dívidas e defesa do executado',
- 'descricao': 'Cobrança de créditos, cumprimento de sentença, penhora, embargos à execução, impenhorabilidade e bem de família.',
+ 'seo_titulo': 'Advogado de Execução e Cobrança em Curitiba e São José dos Pinhais',
+ 'descricao': 'Cobrança de créditos, cumprimento de sentença, penhora, embargos à execução, impenhorabilidade e bem de família. Atendimento em Curitiba, São José dos Pinhais e online.',
  'lead': 'Atuação para receber o que é devido e para defender quem é cobrado de forma indevida ou excessiva.',
  'corpo': '''
 <h2>Para quem tem valores a receber</h2>
@@ -391,7 +391,7 @@ SERVICOS = [
  'grupo': 'Atendimento',
  'titulo': 'Advogado em São José dos Pinhais',
  'seo_titulo': 'Advogado em São José dos Pinhais: família, imóveis e condomínios',
- 'descricao': 'Escritório de advocacia em São José dos Pinhais com atuação em Direito de Família, Direito Imobiliário, Condomínios e Execuções. Atendimento pessoal com Maurício Bandeira, OAB/PR 88.257.',
+ 'descricao': 'Escritório de advocacia em São José dos Pinhais com atuação em Direito de Família, Direito Imobiliário, Condomínios e Execuções. Atendimento pessoal com Maurício Bandeira, OAB/PR 88.257. Atendimento em Curitiba, São José dos Pinhais e online.',
  'lead': 'O escritório fica em São José dos Pinhais e atende com hora marcada, presencialmente ou por videochamada. Cada caso é conduzido pessoalmente pelo advogado, do primeiro contato à última decisão.',
  'corpo': '''
 <h2>Advocacia em São José dos Pinhais</h2>

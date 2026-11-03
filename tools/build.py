@@ -186,7 +186,7 @@ def pagina_servico(s, todos):
         rel = [x for x in todos if x['slug'] != s['slug'] and x['grupo'] == s['grupo'] and x['grupo'] != 'Atendimento' or (x['slug'] == 'direito-de-familia' and s['slug'] != 'direito-de-familia')][:6]
     rel_html = ''.join(f'<a href="/{x["slug"]}/"><b>{esc(x["titulo"])}</b><span>{esc(x["descricao"][:90].rsplit(" ", 1)[0])}…</span></a>' for x in rel)
     schemas = [ORG,
-               {"@type": "Service", "name": s['titulo'], "serviceType": s['titulo'], "provider": {"@id": SITE + "/#escritorio"}, "areaServed": "BR", "url": url, "description": s['descricao']},
+               {"@type": "Service", "name": s['titulo'], "serviceType": s['titulo'], "provider": {"@id": SITE + "/#escritorio"}, "areaServed": [{"@type": "City", "name": "Curitiba"}, {"@type": "City", "name": "São José dos Pinhais"}, {"@type": "Country", "name": "Brasil"}], "url": url, "description": s['descricao']},
                {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in s['faq']]},
                bc_schema([(n, u if u else f'/{s["slug"]}/') for n, u in itens])]
     corpo = f'''{header_interno()}
