@@ -354,11 +354,11 @@ SERVICOS = [
  'titulo': 'Advogado de Família em Curitiba',
  'seo_titulo': 'Advogado de Família em Curitiba: divórcio, pensão e guarda',
  'descricao': 'Advogado de Direito de Família em Curitiba para divórcio, pensão alimentícia, guarda, união estável e partilha. Atendimento pessoal com Maurício Bandeira, OAB/PR 88.257.',
- 'lead': 'Divórcio, pensão, guarda e partilha em Curitiba, com atendimento pessoal pelo advogado, do primeiro contato à última decisão. Presencial com hora marcada ou por videochamada.',
+ 'lead': 'Divórcio, pensão, guarda e partilha em Curitiba, com atendimento pessoal pelo advogado, do primeiro contato à última decisão. Atendimento online sem necessidade de hora marcada, ou presencial com agendamento.',
  'corpo': '''
 <h2>Atendimento em Direito de Família em Curitiba</h2>
 <p>Quem procura um advogado de família em Curitiba geralmente está passando por um momento difícil: uma separação, uma discussão sobre a guarda dos filhos, uma pensão que deixou de ser paga. Nessas horas, faz diferença saber quem está cuidando do caso e conseguir falar com essa pessoa.</p>
-<p>No escritório, cada caso é conduzido pessoalmente pelo advogado Maurício Bandeira, com mais de 10 anos de experiência na advocacia. O atendimento em Curitiba é feito com hora marcada, presencialmente ou por videochamada, e o cliente recebe retorno a cada etapa.</p>
+<p>No escritório, cada caso é conduzido pessoalmente pelo advogado Maurício Bandeira, com mais de 10 anos de experiência na advocacia. O atendimento é online, sem necessidade de hora marcada, ou presencial em Curitiba com agendamento, e o cliente recebe retorno a cada etapa.</p>
 <h2>Casos atendidos</h2>
 <div class="cards-servico">
  <a href="/divorcio/"><b>Divórcio</b><span>Em cartório ou na Justiça, com ou sem filhos menores</span></a>
@@ -381,7 +381,7 @@ SERVICOS = [
 <p class="base-legal">Base legal: Código Civil, arts. 1.571 a 1.590 e 1.694 a 1.727; Código de Processo Civil, arts. 693 a 699 e 731 a 733; Resolução CNJ 35/2007, com a redação da Resolução CNJ 571/2024.</p>
 ''',
  'faq': [
-  ('O atendimento em Curitiba é presencial?', 'Sim, com hora marcada. Também é possível ser atendido por videochamada, com o mesmo acompanhamento, o que costuma ser mais prático para quem tem a rotina corrida.'),
+  ('O atendimento em Curitiba é presencial?', 'Sim, com agendamento. O atendimento online não precisa de hora marcada e tem o mesmo acompanhamento, o que costuma ser mais prático para quem tem a rotina corrida.'),
   ('Onde corre o processo de família de quem mora em Curitiba?', 'Em regra, nas Varas de Família do Foro Central de Curitiba. Em ações de alimentos e de guarda, a lei costuma dar preferência ao domicílio de quem pede alimentos ou de quem tem a guarda da criança.'),
   ('Dá para fazer o divórcio sem ir ao fórum?', 'Quando há acordo, o divórcio pode ser feito em cartório, inclusive de forma eletrônica, sempre com a assistência de advogado. Quando há filhos menores, as questões deles precisam estar previamente resolvidas na Justiça.'),
  ],
@@ -392,10 +392,10 @@ SERVICOS = [
  'titulo': 'Advogado em São José dos Pinhais',
  'seo_titulo': 'Advogado em São José dos Pinhais: família, imóveis e condomínios',
  'descricao': 'Escritório de advocacia em São José dos Pinhais com atuação em Direito de Família, Direito Imobiliário, Condomínios e Execuções. Atendimento pessoal com Maurício Bandeira, OAB/PR 88.257. Atendimento em Curitiba, São José dos Pinhais e online.',
- 'lead': 'O escritório fica em São José dos Pinhais e atende com hora marcada, presencialmente ou por videochamada. Cada caso é conduzido pessoalmente pelo advogado, do primeiro contato à última decisão.',
+ 'lead': 'O escritório fica em São José dos Pinhais e atende online, sem necessidade de hora marcada, ou presencialmente, com agendamento. Cada caso é conduzido pessoalmente pelo advogado, do primeiro contato à última decisão.',
  'corpo': '''
 <h2>Advocacia em São José dos Pinhais</h2>
-<p>O escritório Ferreira Bandeira Advocacia está sediado em São José dos Pinhais. Isso significa proximidade real com quem mora e trabalha na cidade: atendimento com hora marcada, retorno a cada etapa e acompanhamento dos processos no fórum da cidade.</p>
+<p>O escritório Ferreira Bandeira Advocacia está sediado em São José dos Pinhais. Isso significa proximidade real com quem mora e trabalha na cidade: atendimento online sem hora marcada, retorno a cada etapa e acompanhamento dos processos no fórum da cidade.</p>
 <p>O advogado Maurício Bandeira, com mais de 10 anos de experiência, cuida pessoalmente de cada caso, sem repasse a terceiros.</p>
 <h2>Áreas de atuação</h2>
 <div class="cards-servico">
@@ -412,9 +412,48 @@ SERVICOS = [
 <p>O contato pode ser feito pelo formulário desta página ou pelo WhatsApp (41) 98810-7330, de segunda a sexta, das 9h às 18h. O primeiro passo é uma conversa para entender a situação e indicar os caminhos possíveis.</p>
 ''',
  'faq': [
-  ('O escritório atende presencialmente em São José dos Pinhais?', 'Sim, com hora marcada. Quem preferir pode ser atendido por videochamada, com o mesmo acompanhamento.'),
+  ('O escritório atende presencialmente em São José dos Pinhais?', 'Sim, com agendamento. Quem preferir pode ser atendido online, sem necessidade de hora marcada, com o mesmo acompanhamento.'),
   ('Quais casos o escritório atende?', 'Direito de Família, Direito Imobiliário (inclusive usucapião), Condomínios, Execuções e demais questões cíveis, para pessoas, empresas e condomínios.'),
   ('Atende moradores de outras cidades?', 'Sim. Além de São José dos Pinhais e Curitiba, o escritório atende toda a região metropolitana e, por videochamada, clientes de todo o Brasil.'),
+ ],
+},
+{
+ 'slug': 'advogado-online',
+ 'grupo': 'Atendimento',
+ 'titulo': 'Advogado Online para todo o Brasil',
+ 'seo_titulo': 'Advogado de Família Online: atendimento em todo o Brasil',
+ 'descricao': 'Advogado online para divórcio, pensão alimentícia, guarda, união estável, imóveis e condomínios. Atendimento por videochamada em qualquer cidade do Brasil.',
+ 'lead': 'Atendimento por videochamada para clientes de qualquer cidade do Brasil, com o mesmo cuidado do atendimento presencial: o advogado conduz pessoalmente o seu caso, do primeiro contato à última decisão.',
+ 'corpo': '''
+<h2>Como funciona o atendimento online</h2>
+<p>Hoje, quase tudo em um caso de família ou cível pode ser feito a distância. Os processos tramitam em sistemas eletrônicos, os documentos são enviados digitalmente e as audiências, em muitos casos, acontecem por videoconferência.</p>
+<ul>
+<li><strong>Primeiro contato:</strong> pelo formulário do site ou pelo WhatsApp, com uma breve descrição da situação.</li>
+<li><strong>Atendimento online:</strong> sem necessidade de hora marcada, por WhatsApp ou videochamada, para entender o caso e apresentar os caminhos possíveis.</li>
+<li><strong>Documentos e assinaturas:</strong> enviados por meio digital; procuração e contrato podem ser assinados eletronicamente.</li>
+<li><strong>Acompanhamento:</strong> retorno a cada etapa relevante, por WhatsApp, e-mail ou nova videochamada.</li>
+</ul>
+<h2>Casos que podem ser atendidos a distância</h2>
+<div class="cards-servico">
+ <a href="/divorcio/"><b>Divórcio</b><span>Inclusive em cartório, por escritura eletrônica</span></a>
+ <a href="/pensao-alimenticia/"><b>Pensão alimentícia</b><span>Fixação, revisão e exoneração</span></a>
+ <a href="/guarda-de-filhos/"><b>Guarda e convivência</b><span>Inclusive quando os pais moram em cidades diferentes</span></a>
+ <a href="/uniao-estavel/"><b>União estável</b><span>Reconhecimento, dissolução e contrato de convivência</span></a>
+ <a href="/execucao-de-alimentos/"><b>Pensão atrasada</b><span>Cobrança pelo rito da prisão ou da penhora</span></a>
+ <a href="/direito-imobiliario/"><b>Imóveis</b><span>Contratos, compra e venda e regularização</span></a>
+ <a href="/condominios/"><b>Condomínios</b><span>Convenções, assembleias e cobranças</span></a>
+ <a href="/execucoes/"><b>Execuções</b><span>Cobrança e defesa de quem é cobrado</span></a>
+</div>
+<h2>Divórcio e outros atos em cartório pela internet</h2>
+<p>Quando há acordo, o divórcio, a dissolução de união estável e outros atos podem ser feitos por escritura pública eletrônica, pela plataforma e-Notariado, com videoconferência com o tabelião e assinatura digital. A presença de advogado continua obrigatória, e o atendimento pode ser feito a distância.</p>
+<h2>Processos em outros estados</h2>
+<p>Os processos eletrônicos permitem atuar em ações que tramitam em outros estados. O escritório avalia em cada caso a forma adequada de atuação, observadas as regras da OAB sobre atuação fora da seccional de inscrição.</p>
+<p class="base-legal">Base legal: Lei 11.419/2006 (processo eletrônico); Código de Processo Civil, arts. 193 a 199 e 236, §3º; Código Nacional de Normas do CNJ (atos notariais eletrônicos); Lei 8.906/1994, art. 10, §2º.</p>
+''',
+ 'faq': [
+  ('O atendimento online tem a mesma qualidade do presencial?', 'Sim. A conversa é feita pelo próprio advogado, sem necessidade de hora marcada, e o acompanhamento do caso é o mesmo. Muitos clientes preferem o online pela praticidade.'),
+  ('Moro em outro estado. Posso contratar?', 'Sim. O caso é analisado na primeira conversa, inclusive quanto ao local onde o processo vai tramitar e à forma de atuação adequada.'),
+  ('Como assino a procuração e o contrato?', 'Por assinatura eletrônica, como a do gov.br ou um certificado digital, sem precisar imprimir nem ir a cartório.'),
  ],
 },
 ]
