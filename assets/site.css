@@ -414,3 +414,16 @@ a.selo-m:hover{transform:translateY(-3px)}
 @media (max-width:899px){.sobre-foto{padding-bottom:0}.sobre-foto img{width:100%}.sobre-foto .quote{position:relative;width:auto;margin:-60px 16px 0}}
 /* retrato principal com cantos e moldura */
 .adv-card{grid-template-columns:minmax(0,400px) minmax(0,1fr)}
+
+/* fotos no escritório (quadradas) */
+.adv-card{grid-template-columns:minmax(0,480px) minmax(0,1fr)}
+.retrato.com-foto{background:#2a2622}
+.retrato.com-foto img{object-position:72% center}
+.retrato.com-foto::after{background:linear-gradient(0deg,rgba(7,15,33,.45),rgba(7,15,33,0) 35%)}
+.sobre-foto img{aspect-ratio:1/1;object-position:center}
+@media (max-width:819px){.retrato.com-foto{aspect-ratio:1/1}.retrato.com-foto img{object-position:center}}
+.retrato.com-foto img{object-position:100% center}
+.sobre-foto{padding-bottom:190px}
+.sobre-foto .quote{width:74%}
+@media (max-width:899px){.sobre-foto{padding-bottom:0}.sobre-foto .quote{width:auto}}
+@media (max-width:819px){.adv-card{grid-template-columns:1fr}}
