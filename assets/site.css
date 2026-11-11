@@ -397,3 +397,10 @@ a.selo-m:hover{transform:translateY(-3px)}
 .marco.marco-medalha{background:none;border:0;border-radius:0;box-shadow:none;width:300px;height:300px;filter:drop-shadow(0 24px 40px rgba(0,0,0,.5)) drop-shadow(0 0 30px rgba(236,161,81,.25))}
 .marco.marco-medalha::before{display:none}
 .marco.marco-medalha svg{width:100%;height:100%;display:block}
+
+/* foto do advogado */
+.retrato.com-foto{background:#e9e7e2;min-height:560px}
+.retrato.com-foto picture,.retrato.com-foto img{position:absolute;inset:0;width:100%;height:100%;display:block}
+.retrato.com-foto img{object-fit:cover;object-position:center top}
+.retrato.com-foto::after{background:linear-gradient(0deg,rgba(7,15,33,.35),rgba(7,15,33,0) 30%)}
+@media (max-width:819px){.retrato.com-foto{min-height:0;aspect-ratio:3/4}}
