@@ -114,3 +114,40 @@
   var sc=document.getElementById('saida-copy'); if(sc) sc.addEventListener('click',function(){copiar(document.getElementById('saida-msg').textContent,this)});
   }
 })();
+
+/* ===== Consentimento de cookies (LGPD / Guia de Cookies da ANPD) ===== */
+(function(){
+  var KEY='fb_consentimento', VERSAO=1, VALIDADE=365*24*3600*1000;
+  function ler(){try{var c=JSON.parse(localStorage.getItem(KEY)||'null');if(c&&c.v===VERSAO&&(Date.now()-c.data)<VALIDADE)return c;}catch(e){}return null;}
+  function gravar(est,mkt){var c={v:VERSAO,data:Date.now(),necessarios:true,estatisticas:!!est,marketing:!!mkt};try{localStorage.setItem(KEY,JSON.stringify(c));}catch(e){}window.fbConsentimento=c;document.dispatchEvent(new CustomEvent('fb:consentimento',{detail:c}));return c;}
+  window.fbConsentimento=ler();
+  var box=document.createElement('div');
+  box.className='ck';box.setAttribute('role','dialog');box.setAttribute('aria-live','polite');box.setAttribute('aria-label','Aviso de cookies');
+  box.innerHTML='<div class="ck-in">'+
+   '<div class="ck-txt"><b>Sua privacidade</b><p>Este site usa apenas o armazenamento necessário para funcionar. Cookies de estatística e de marketing só são ativados com a sua autorização. Saiba mais na <a href="/politica-de-privacidade/#cookies">Política de Privacidade</a>.</p></div>'+
+   '<div class="ck-op" hidden>'+
+     '<label class="ck-cat"><input type="checkbox" checked disabled> <span><b>Necessários</b> Guardam a sua escolha sobre cookies. Sempre ativos.</span></label>'+
+     '<label class="ck-cat"><input type="checkbox" id="ck-est"> <span><b>Estatísticas</b> Ajudam a entender quantas pessoas visitam o site.</span></label>'+
+     '<label class="ck-cat"><input type="checkbox" id="ck-mkt"> <span><b>Marketing</b> Usados para anúncios personalizados.</span></label>'+
+   '</div>'+
+   '<div class="ck-bt"><button type="button" class="ck-b" data-a="rejeitar">Rejeitar não essenciais</button><button type="button" class="ck-b" data-a="config">Configurar</button><button type="button" class="ck-b ck-p" data-a="aceitar">Aceitar todos</button></div>'+
+  '</div>';
+  function abrir(config){
+    if(!box.isConnected)document.body.appendChild(box);
+    var c=window.fbConsentimento||{};
+    box.querySelector('#ck-est').checked=!!c.estatisticas;box.querySelector('#ck-mkt').checked=!!c.marketing;
+    box.querySelector('.ck-op').hidden=!config;
+    var b=box.querySelector('[data-a="config"]');b.textContent=config?'Salvar preferências':'Configurar';b.dataset.a=config?'salvar':'config';
+    box.classList.add('on');
+  }
+  function fechar(){box.classList.remove('on');}
+  box.addEventListener('click',function(e){
+    var a=e.target.getAttribute&&e.target.getAttribute('data-a');if(!a)return;
+    if(a==='aceitar'){gravar(true,true);fechar();}
+    else if(a==='rejeitar'){gravar(false,false);fechar();}
+    else if(a==='config'){abrir(true);}
+    else if(a==='salvar'){gravar(box.querySelector('#ck-est').checked,box.querySelector('#ck-mkt').checked);fechar();}
+  });
+  document.addEventListener('click',function(e){var l=e.target.closest&&e.target.closest('[data-cookies]');if(l){e.preventDefault();abrir(true);}});
+  if(!window.fbConsentimento){if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){abrir(false)});else abrir(false);}
+})();
