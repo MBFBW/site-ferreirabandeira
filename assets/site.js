@@ -99,7 +99,7 @@
       var dados={'Nome':g('f-nome'),'WhatsApp':g('f-tel'),'E-mail':g('f-mail')||'(não informado)','Cidade':g('f-cid')||'(não informada)','Assunto':g('f-area'),'Preferência':g('f-pref'),'Relato':g('f-msg'),_honey:document.getElementById('f-honey').value};
       fetch('https://script.google.com/macros/s/AKfycbwqJKdfWnX9znlkZDObRgVfbw16tc-SF4BXs5APsai1uEOl_itbXqOeqYHVo4OhxunAWg/exec',{method:'POST',body:JSON.stringify(dados)})
         .then(function(r){return r.json().then(function(j){if(!j||j.ok!==true)throw new Error((j&&j.erro)||'falha');})})
-        .then(function(){f.reset();document.getElementById('saida').hidden=true;document.getElementById('ok-mail').hidden=false;document.getElementById('ok-mail').scrollIntoView({block:'nearest'})})
+        .then(function(){document.dispatchEvent(new CustomEvent('fb:lead',{detail:{via:'email',assunto:g('f-area')}}));f.reset();document.getElementById('saida').hidden=true;document.getElementById('ok-mail').hidden=false;document.getElementById('ok-mail').scrollIntoView({block:'nearest'})})
         .catch(function(){err.textContent='Não foi possível enviar agora. Tente novamente em instantes ou fale pelo WhatsApp (41) 98810-7330.';err.hidden=false})
         .then(function(){bt.disabled=false;bt.textContent=rot});
       return;
@@ -109,6 +109,7 @@
     document.getElementById('saida-txt').textContent='Sua mensagem foi preparada e o WhatsApp deve abrir em seguida. Se não abrir, use o botão abaixo ou copie o texto.';
     document.getElementById('saida-msg').textContent=txt;
     document.getElementById('saida').hidden=false;
+    document.dispatchEvent(new CustomEvent('fb:lead',{detail:{via:'whatsapp',assunto:g('f-area')}}));
     window.open(url,'_blank');
   });
   var sc=document.getElementById('saida-copy'); if(sc) sc.addEventListener('click',function(){copiar(document.getElementById('saida-msg').textContent,this)});
@@ -127,8 +128,8 @@
    '<div class="ck-txt"><b>Sua privacidade</b><p>Este site usa apenas o armazenamento necessário para funcionar. Cookies de estatística e de marketing só são ativados com a sua autorização. Saiba mais na <a href="/politica-de-privacidade/#cookies">Política de Privacidade</a>.</p></div>'+
    '<div class="ck-op" hidden>'+
      '<label class="ck-cat"><input type="checkbox" checked disabled> <span><b>Necessários</b> Guardam a sua escolha sobre cookies. Sempre ativos.</span></label>'+
-     '<label class="ck-cat"><input type="checkbox" id="ck-est"> <span><b>Estatísticas</b> Ajudam a entender quantas pessoas visitam o site.</span></label>'+
-     '<label class="ck-cat"><input type="checkbox" id="ck-mkt"> <span><b>Marketing</b> Usados para anúncios personalizados.</span></label>'+
+     '<label class="ck-cat"><input type="checkbox" id="ck-est"> <span><b>Estatísticas</b> Google Analytics: contam visitas, páginas lidas e a região de acesso, sem identificar você.</span></label>'+
+     '<label class="ck-cat"><input type="checkbox" id="ck-mkt"> <span><b>Marketing</b> Permitem ao Google estimar dados agregados de público (faixa etária e interesses) e medir anúncios.</span></label>'+
    '</div>'+
    '<div class="ck-bt"><button type="button" class="ck-b" data-a="rejeitar">Rejeitar não essenciais</button><button type="button" class="ck-b" data-a="config">Configurar</button><button type="button" class="ck-b ck-p" data-a="aceitar">Aceitar todos</button></div>'+
   '</div>';
@@ -150,4 +151,39 @@
   });
   document.addEventListener('click',function(e){var l=e.target.closest&&e.target.closest('[data-cookies]');if(l){e.preventDefault();abrir(true);}});
   if(!window.fbConsentimento){if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){abrir(false)});else abrir(false);}
+})();
+
+/* ===== Google Analytics 4: só carrega com consentimento de "Estatísticas" ===== */
+(function(){
+  var ID='G-XY7HTCDF8S', carregado=false;
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  window.gtag=gtag;
+  gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
+  function aplicar(c){
+    c=c||{};
+    var est=!!c.estatisticas, mkt=!!(c.estatisticas&&c.marketing);
+    gtag('consent','update',{analytics_storage:est?'granted':'denied',ad_storage:mkt?'granted':'denied',ad_user_data:mkt?'granted':'denied',ad_personalization:mkt?'granted':'denied'});
+    if(est&&!carregado){
+      carregado=true;
+      var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+ID;document.head.appendChild(s);
+      gtag('js',new Date());
+      gtag('config',ID,{anonymize_ip:true});
+    }
+    if(!est){
+      // consentimento revogado: apaga os cookies do Analytics
+      document.cookie.split(';').forEach(function(k){var n=k.split('=')[0].trim();if(/^_ga/.test(n)){['',location.hostname,'.'+location.hostname.replace(/^www\./,'')].forEach(function(d){document.cookie=n+'=; Max-Age=0; path=/'+(d?'; domain='+d:'');});}});
+    }
+  }
+  function evento(nome,p){if(carregado)gtag('event',nome,p||{});}
+  aplicar(window.fbConsentimento);
+  document.addEventListener('fb:consentimento',function(e){aplicar(e.detail);});
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;
+    var h=a.getAttribute('href')||'';
+    if(/wa\.me|whatsapp/i.test(h))evento('clique_whatsapp',{local:a.closest('header')?'topo':a.closest('footer')?'rodape':(a.classList.contains('wa-float')?'flutuante':'conteudo'),pagina:location.pathname});
+    else if(/^tel:/.test(h))evento('clique_telefone',{pagina:location.pathname});
+    else if(/^mailto:/.test(h))evento('clique_email',{pagina:location.pathname});
+  },true);
+  document.addEventListener('fb:lead',function(e){var d=e.detail||{};evento('generate_lead',{via:d.via,assunto:d.assunto,pagina:location.pathname});});
 })();
